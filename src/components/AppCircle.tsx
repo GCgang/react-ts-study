@@ -12,7 +12,6 @@ interface CircleProps {
 }
 
 export default function Circle({ bgColor, borderColor }: CircleProps) {
-  const [counter, setCounter] = useState(0);
   return (
     <Container
       bgColor={bgColor}

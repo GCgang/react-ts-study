@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppForm from './components/AppForm';
-import { ThemeProvider } from 'styled-components';
-import { darkTheme, lightTheme } from './theme';
+import createRoot from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import router from './routerBook';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <AppForm />
-    </ThemeProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
